@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container >*{
+    box-shadow: -1px 0px 4px 0px black;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: #ffffff;
+}
+
+.logoencabezado{
+    float: left;
+    margin-left: 30px;
+}
+
+h1{
+    margin-top: 40px;
+    font-family: verdana(sans-serif);
+    font-size: 40px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.text1{
+    grid-area: text1;
+    background-color: rgba(202, 196, 196, 0.877);
+    padding: 30px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.text2{
+    grid-area: text2;
+    background-color: rgba(202, 196, 196, 0.877);
+    padding: 20px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+p{
+    font-size: 20px;
+    font-family: tohama(sans-serif);
+}
+
+.ul{
+    grid-area: ul;
+    background-color: rgba(202, 196, 196, 0.877);
+    padding: 15px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.footer{
+    grid-area: footer;
+    background-image: url(../img/pie_copia.jpg);
+}
+
+.grid-container{
+    display: grid;
+    gap: 8px;
+    grid-template-areas: 
+      "header"
+      "text1"
+      "text2"
+      "ul"
+      "footer";
+}
+
+@media (min-width: 1080px){
+    .grid-container{
+        grid-template: 
+        "header header header" 170px
+        "text1 text1 text1" 300px
+        "text2 text2 text2" 300px
+        "ul ul ul" 300px
+        "footer footer footer" 140px /
+        200px auto 200px;
+    }
+}
